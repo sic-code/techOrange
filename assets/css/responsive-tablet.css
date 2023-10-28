@@ -1,0 +1,19 @@
+header>div, article, footer>div {
+    padding: 0 40px;
+}
+
+.show-categoty {
+    .item:nth-child(2n) {
+        border-right: none;
+    }
+}
+
+.product {
+    .item {
+        width: 50%;
+    }
+}
+
+.laptop {
+    flex-direction: column;
+}

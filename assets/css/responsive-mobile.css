@@ -1,0 +1,120 @@
+header>div,
+article,
+footer>div {
+    padding: 0 10px;
+}
+
+header {
+    .heading {
+        flex-direction: column;
+        padding-top: 10px;
+
+        .logo,
+        .tools {
+            flex: 100%;
+
+            & img {
+                width: 100%;
+            }
+
+            .search {
+                flex: 80%;
+            }
+
+            .cart-user {
+                flex: 20%;
+
+                .cart {
+                    margin-right: 10px;
+                }
+
+                .flex-left {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .menu {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .dropdown {
+            & button {
+                padding-right: 0;
+
+                & i {
+                    display: none;
+                }
+            }
+        }
+
+        .nav-bar {
+            & button {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 20px;
+                height: 60px;
+                cursor: pointer;
+            }
+
+            & ul {
+                position: absolute;
+                left: 0;
+                display: none;
+                flex-direction: column;
+                z-index: 99;
+                background-color: var(--background);
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+                & li>a {
+                    display: block;
+                    padding: 10px 20px;
+                    color: var(--green);
+                    font-size: 16px;
+                    line-height: 20px;
+                    width: 150px;
+                    &:hover {
+                        background-color: var(--green);
+                        color: var(--white);
+                    }
+                }
+
+                & li::after {
+                    display: none;
+                }
+            }
+            &:hover>ul {
+                display: block;
+            }
+        }
+
+        .nav-contact {
+            display: none;
+        }
+    }
+}
+
+article {
+    .show-categoty {
+        display: none;
+    }
+
+    .best-seller {
+        display: none;
+    }
+
+    .product {
+        .item {
+            width: 50%;
+        }
+    }
+
+    .product_details {
+        .box_main {
+            flex-direction: column;
+        }
+    }
+}
